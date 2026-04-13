@@ -9,7 +9,7 @@ BUILD_DIR = ./build
 CC = gcc
 CFLAGS = -I../include -I/opt/vc/include -I/usr/include -fPIC -Wall -Wextra -g -O2 -DENABLE_LOCALES=Off
 LDFLAGS = -L/opt/vc/lib -zdefs -shared -pthread -Wl,-soname,lib$(NAME).so.$(MAJOR)
-DEPLIBS = -lm -lgpiod
+DEPLIBS = -lm -L/usr/local/lib -lgpiod
 RM = rm -f
 TARGET_LIB = lib$(NAME).so.$(VERSION)
 
